@@ -16,10 +16,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="callstack" element={<CallStack />} />
-        <Route path="microtaskqueue" element={<MicroTaskQueue />} />
-        <Route path="taskqueue" element={<TaskQueue />} />
+        <Route path="javascript-run-time-animation/" element={<App />} />
+        <Route path="javascript-run-time-animation/callstack" element={<CallStack />} />
+        <Route path="javascript-run-time-animation/microtaskqueue" element={<MicroTaskQueue />} />
+        <Route path="javascript-run-time-animation/taskqueue" element={<TaskQueue />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
