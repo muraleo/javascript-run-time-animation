@@ -17,7 +17,7 @@ function App() {
 		<div className="app">
 				<Button variant="contained" size="large"><Link to="callstack">Call Stack</Link></Button>
 				<Button variant="contained" size="large"><Link to="taskqueue">Task Queue</Link></Button>
-				<Button variant="contained" size="large"><Link to="microtaskqueue">Micro Task Queue</Link></Button>
+				<Button variant="contained" size="large"><Link to="microtaskqueue">Microtask Queue</Link></Button>
 		</div>
 	);
 }
