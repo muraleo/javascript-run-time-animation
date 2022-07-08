@@ -16,6 +16,44 @@ a {
   color: white;
 }
 
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(231, 235, 240);
+  padding: 30px;
+
+  .box-section {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgba(14, 165, 233, 0.2);
+    margin: 20px;
+  }
+
+  .source-code-section {
+    height: 45vh;
+  }
+
+  .console-section {
+    height: 35vh;
+  }
+
+  .call-stack-section {
+    height: 30vh;
+  }
+
+  .web-api-section {
+    height: 30vh;
+  }
+
+  .task-queue-section {
+    height: 20vh;
+  }
+  .microtask-queue-section {
+    height: 20vh;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

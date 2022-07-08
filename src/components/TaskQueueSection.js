@@ -2,8 +2,8 @@ import React from 'react';
 
 const TaskQueueSection = () => {
     return (
-        <div>
-            
+        <div className="box-section task-queue-section">
+            TaskQueueSection
         </div>
     );
 };

@@ -2,8 +2,8 @@ import React from 'react';
 
 const CallStackSection = () => {
     return (
-        <div>
-            
+        <div className="box-section call-stack-section w-2/4">
+            CallStackSection
         </div>
     );
 };

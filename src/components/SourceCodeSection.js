@@ -2,8 +2,8 @@ import React from 'react';
 
 const SourceCodeSection = () => {
     return (
-        <div>
-            
+        <div className="box-section source-code-section">
+            Source Code
         </div>
     );
 };
