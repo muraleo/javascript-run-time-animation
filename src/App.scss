@@ -54,6 +54,10 @@ a {
 
   .console-section {
     height: 35vh;
+
+    &.half-height {
+      height: 20vh;
+    }
   }
 
   .call-stack-section {
@@ -86,6 +90,7 @@ a {
   #circular-icon {
     width: 51px;
     height: 42px;
+    margin-left: 15%;
 
     &.running {
       animation: circular-icon-spin 1s linear;
@@ -94,7 +99,7 @@ a {
 
   .section-card {
     margin-top: 5px;
-    div {
+    &>div {
       padding: 10px;
       white-space: pre;
     }

@@ -1,12 +1,14 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CountDownCircle from "../elements/CountDownCircle";
 
-const SectionCard = ({content}) => {
+const SectionCard = ({content, countDownTime}) => {
     return (
         <Card className="section-card">
-            <CardContent>
-                {content}
+            <CardContent className="flex items-center">
+                {countDownTime && <CountDownCircle countDownTime={10} />}
+                <div>{content}</div>
             </CardContent>
         </Card>
     );

@@ -12,6 +12,7 @@ import CallStackSection from './CallStackSection';
 import WebAPIsSection from './WebAPIsSection';
 import TaskQueueSection from './TaskQueueSection';
 import MicrotaskQueueSection from './MicrotaskQueueSection';
+import BrowserSection from './BrowserSection';
 
 import circularIcon from '../circular-icon.png';
 
@@ -59,7 +60,8 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, hideCir
 							sourceCodeData={sourceCodeData}
 							sourceCodeSteps={viewSteps[step].sourceCodeSteps}
 						/>
-						<ConsoleSection consoleData={viewSteps[step].consoleSteps}/>
+						<ConsoleSection consoleData={viewSteps[step].consoleSteps} classNames="half-height"/>
+						<BrowserSection />
 					</Grid>
 					<Grid item xs={8}>
 						<div className="jre-container">
@@ -67,6 +69,7 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, hideCir
 								<CallStackSection callStackData={viewSteps[step].callStackSteps}/>
 								{!hideWebAPIs && <WebAPIsSection />}
 							</div>
+							{!hideCircularIcon && <img src={circularIcon} id="circular-icon" alt="circular-icon" />}
 							<Grid item xs={12}>
 								{!hideTaskQueue && <TaskQueueSection />}
 							</Grid>
@@ -86,7 +89,6 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, hideCir
 						NEXT
 					</Button>
 				</div>
-				{!hideCircularIcon && <img src={circularIcon} id="circular-icon" alt="circular-icon" />}
 			</div>
 		</div>
 	);
