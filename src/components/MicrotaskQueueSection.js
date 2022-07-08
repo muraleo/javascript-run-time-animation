@@ -1,9 +1,10 @@
 import React from 'react';
+import SectionHeader from "../elements/SectionHeader";
 
 const MicrotaskQueueSection = () => {
     return (
         <div className="box-section microtask-queue-section">
-            MicrotaskQueueSection
+            <SectionHeader header="Microtask Queue"/>
         </div>
     );
 };

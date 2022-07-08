@@ -1,9 +1,10 @@
 import React from 'react';
+import SectionHeader from "../elements/SectionHeader";
 
 const ConsoleSection = () => {
     return (
         <div className="box-section console-section">
-            Console
+            <SectionHeader header={"Console"}/>
         </div>
     );
 };
