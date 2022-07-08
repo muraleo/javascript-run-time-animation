@@ -1,10 +1,10 @@
-export const sourceCodeData = `console.log("test")
+export const sourceCodeData = `console.log("hello world!")
 
 function greeting() {
    sayHi();
 }
 function sayHi() {
-   return "Hi!";
+   console.log("Hi");
 }
 
 // Invoke the 'greeting' function

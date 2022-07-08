@@ -91,6 +91,23 @@ a {
       animation: circular-icon-spin 1s linear;
     }
   }
+
+  .section-card {
+    margin-top: 5px;
+    div {
+      padding: 10px;
+      white-space: pre;
+    }
+  }
+
+  .call-stack-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .section-content-height-full {
+    height: calc(100% - 40px);
+  }
 }
 
 .source-code-row {

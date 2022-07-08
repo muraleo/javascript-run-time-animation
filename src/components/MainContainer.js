@@ -27,26 +27,30 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, sourceC
 		setTimeout(() => {
 			circularIconElement.classList.remove('running');
 		}, 1000);
-	}
+	};
 
 	const onPrevHandler = () => {
-		if(step >= 1) {
+		if (step >= 1) {
 			runCircularIconAnime();
 			setStep(step - 1);
 		}
-	}
+	};
 
 	const onNextHandler = () => {
-		if(step + 1 < maxStep) {
+		if (step + 1 < maxStep) {
 			runCircularIconAnime();
 			setStep(step + 1);
 		}
-	}
+	};
 
 	return (
 		<div className="main-container">
-			<div className="nav">
+			<div className="nav flex justify-between">
 				<Link to={getPath()}>HOME</Link>
+				<div className="mr-16 text-white">
+					Step: <span>{step + 1}</span>
+					<span>{step === maxStep - 1 ? ' (Finished!)' : ''}</span>
+				</div>
 			</div>
 			<Box sx={{ width: '100%' }}>
 				<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -55,29 +59,26 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, sourceC
 							sourceCodeData={sourceCodeData}
 							sourceCodeSteps={viewSteps[step].sourceCodeSteps}
 						/>
-						<ConsoleSection />
+						<ConsoleSection consoleData={viewSteps[step].consoleSteps}/>
 					</Grid>
 					<Grid item xs={8}>
 						<div className="jre-container">
 							<div className="flex">
-								<CallStackSection />
-								{/* {!hideWebAPIs && <WebAPIsSection />} */}
-								{<WebAPIsSection />}
+								<CallStackSection callStackData={viewSteps[step].callStackSteps}/>
+								{!hideWebAPIs && <WebAPIsSection />}
 							</div>
 							<Grid item xs={12}>
-								{/* {!hideTaskQueue && <TaskQueueSection />} */}
-								{<TaskQueueSection />}
+								{!hideTaskQueue && <TaskQueueSection />}
 							</Grid>
 							<Grid item xs={12}>
-								{/* {!hideMicrotaskQueue && <MicrotaskQueueSection />} */}
-								{<MicrotaskQueueSection />}
+								{!hideMicrotaskQueue && <MicrotaskQueueSection />}
 							</Grid>
 						</div>
 					</Grid>
 				</Grid>
 			</Box>
 			<div className="step-buttons width-full flex">
-				<div style={{marginRight: '20.3%'}}>
+				<div style={{ marginRight: '20.3%' }}>
 					<Button className="mr-4" variant="contained" size="large" onClick={onPrevHandler}>
 						PREV
 					</Button>
@@ -85,7 +86,7 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, sourceC
 						NEXT
 					</Button>
 				</div>
-				<img src={circularIcon} id="circular-icon" alt="circular-icon"/>
+				<img src={circularIcon} id="circular-icon" alt="circular-icon" />
 			</div>
 		</div>
 	);
