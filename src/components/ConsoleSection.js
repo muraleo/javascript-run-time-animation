@@ -9,7 +9,7 @@ const ConsoleSection = ({consoleData = []}) => {
             <div className="section-content-height-full bg-white p-2 rounded">
                 {consoleData.map((data, idx) => {
                     return <div key={`call-stack-${idx}`}>
-                    > {data}
+                    <span className="text-blue-500">&#62;</span> {data}
                     </div>
                 })}
             </div>
