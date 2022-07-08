@@ -30,7 +30,7 @@ const CountDownCircle = ({ countDownTime }) => {
     <div className="countdown mr-4">
       <div ref={countDownCircleRef} className="countdown-number"></div>
       <svg>
-        <circle r="18" cx="20" cy="20"></circle>
+        <circle style={{animationDuration: `${countDownTime}s`}} r="18" cx="20" cy="20"></circle>
       </svg>
     </div>
   );

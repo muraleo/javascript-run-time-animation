@@ -80,7 +80,7 @@ const MainContainer = ({
                 <CallStackSection
                   callStackData={viewSteps[step].callStackSteps}
                 />
-                {!hideWebAPIs && <WebAPIsSection />}
+                {!hideWebAPIs && <WebAPIsSection webApisData={viewSteps[step].webApisSteps}/>}
               </div>
               {!hideCircularIcon && (
                 <img
@@ -90,7 +90,7 @@ const MainContainer = ({
                 />
               )}
               <Grid item xs={12}>
-                {!hideTaskQueue && <TaskQueueSection />}
+                {!hideTaskQueue && <TaskQueueSection taskQueueData={viewSteps[step].taskQueueSteps}/>}
               </Grid>
               <Grid item xs={12}>
                 {!hideMicrotaskQueue && <MicrotaskQueueSection />}

@@ -7,7 +7,7 @@ const SectionCard = ({ content, countDownTime }) => {
   return (
     <Card className="section-card">
       <CardContent className="flex items-center">
-        {countDownTime && <CountDownCircle countDownTime={10} />}
+        {countDownTime && <CountDownCircle countDownTime={countDownTime} />}
         <div>{content}</div>
       </CardContent>
     </Card>
