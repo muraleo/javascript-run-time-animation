@@ -17,7 +17,7 @@ import MicrotaskQueueSection from './MicrotaskQueueSection';
 
 import { getPath } from '../utils';
 
-const MainContainer = () => {
+const MainContainer = ({hideWebAPIs, hideTaskQueue, hideMicrotaskQueue}) => {
 	return (
 		<div className="main-container">
 			<div className="nav">
@@ -33,13 +33,13 @@ const MainContainer = () => {
 						<div className="jre-container">
 							<div className="flex">
 								<CallStackSection />
-								<WebAPIsSection />
+								{!hideWebAPIs && <WebAPIsSection />}
 							</div>
 							<Grid item xs={12}>
-								<TaskQueueSection />
+								{!hideTaskQueue && <TaskQueueSection />}
 							</Grid>
 							<Grid item xs={12}>
-								<MicrotaskQueueSection />
+								{!hideMicrotaskQueue && <MicrotaskQueueSection />}
 							</Grid>
 						</div>
 					</Grid>

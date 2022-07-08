@@ -4,7 +4,7 @@ import MainContainer from '../components/MainContainer';
 const TaskQueue = () => {
     return (
         <div>
-             <MainContainer/>
+             <MainContainer hideMicrotaskQueue/>
         </div>
     );
 };

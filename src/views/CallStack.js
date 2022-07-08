@@ -4,7 +4,7 @@ import MainContainer from '../components/MainContainer';
 const CallStack = () => {
     return (
         <div>
-            <MainContainer/>
+            <MainContainer hideWebAPIs hideTaskQueue hideMicrotaskQueue/>
         </div>
     );
 };
