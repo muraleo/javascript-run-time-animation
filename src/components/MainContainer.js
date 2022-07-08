@@ -43,7 +43,7 @@ const MainContainer = () => {
 						<Grid item xs={12}>
 							<MicrotaskQueueSection />
 						</Grid>
-						<div className="width-full flex justify-right">
+						<div className="width-full flex justify-end">
 							<IconButton aria-label="left">
 								<ChevronLeftIcon />
 							</IconButton>
