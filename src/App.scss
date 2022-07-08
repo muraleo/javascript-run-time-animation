@@ -49,6 +49,7 @@ a {
 
   .source-code-section {
     height: 45vh;
+    background-color: #FBF1D3;
   }
 
   .console-section {
@@ -56,6 +57,7 @@ a {
   }
 
   .call-stack-section {
+    width: 30%;
     height: 36vh;
   }
 
@@ -71,18 +73,47 @@ a {
   }
 
   .step-buttons button{
-    margin-right: 20px;
-    margin-top: 10px;
+    margin-left: 20px;
   }
 
   .section-header {
     padding-bottom: 5px;
+    margin-bottom: 10px;
     border-bottom: 1px solid black;
     color: #263238;
   }
+
+  #circular-icon {
+    width: 51px;
+    height: 42px;
+
+    &.running {
+      animation: circular-icon-spin 1s linear;
+    }
+  }
 }
 
-@keyframes App-logo-spin {
+.source-code-row {
+  .code-idx {
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+    border-right: 1px solid #888;
+  }
+
+  .code-str {
+    padding: 0 5px;
+    font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+    font-size: 12px;
+    white-space: pre;
+
+    &.highlight {
+      background-color: rgba(236, 117, 74, 0.25);
+    }
+  }
+}
+
+@keyframes circular-icon-spin {
   from {
     transform: rotate(0deg);
   }

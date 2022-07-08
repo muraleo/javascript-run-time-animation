@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
@@ -15,9 +13,36 @@ import WebAPIsSection from './WebAPIsSection';
 import TaskQueueSection from './TaskQueueSection';
 import MicrotaskQueueSection from './MicrotaskQueueSection';
 
+import circularIcon from '../circular-icon.png';
+
 import { getPath } from '../utils';
 
-const MainContainer = ({hideWebAPIs, hideTaskQueue, hideMicrotaskQueue}) => {
+const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, sourceCodeData, viewSteps = [] }) => {
+	const maxStep = viewSteps.length;
+	const [ step, setStep ] = useState(0);
+
+	const runCircularIconAnime = () => {
+		const circularIconElement = document.getElementById('circular-icon');
+		circularIconElement.classList.add('running');
+		setTimeout(() => {
+			circularIconElement.classList.remove('running');
+		}, 1000);
+	}
+
+	const onPrevHandler = () => {
+		if(step >= 1) {
+			runCircularIconAnime();
+			setStep(step - 1);
+		}
+	}
+
+	const onNextHandler = () => {
+		if(step + 1 < maxStep) {
+			runCircularIconAnime();
+			setStep(step + 1);
+		}
+	}
+
 	return (
 		<div className="main-container">
 			<div className="nav">
@@ -26,28 +51,41 @@ const MainContainer = ({hideWebAPIs, hideTaskQueue, hideMicrotaskQueue}) => {
 			<Box sx={{ width: '100%' }}>
 				<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
 					<Grid item xs={4}>
-						<SourceCodeSection />
+						<SourceCodeSection
+							sourceCodeData={sourceCodeData}
+							sourceCodeSteps={viewSteps[step].sourceCodeSteps}
+						/>
 						<ConsoleSection />
 					</Grid>
 					<Grid item xs={8}>
 						<div className="jre-container">
 							<div className="flex">
 								<CallStackSection />
-								{!hideWebAPIs && <WebAPIsSection />}
+								{/* {!hideWebAPIs && <WebAPIsSection />} */}
+								{<WebAPIsSection />}
 							</div>
 							<Grid item xs={12}>
-								{!hideTaskQueue && <TaskQueueSection />}
+								{/* {!hideTaskQueue && <TaskQueueSection />} */}
+								{<TaskQueueSection />}
 							</Grid>
 							<Grid item xs={12}>
-								{!hideMicrotaskQueue && <MicrotaskQueueSection />}
+								{/* {!hideMicrotaskQueue && <MicrotaskQueueSection />} */}
+								{<MicrotaskQueueSection />}
 							</Grid>
 						</div>
 					</Grid>
 				</Grid>
 			</Box>
-			<div className="step-buttons width-full flex justify-end">
-				<Button className="mr-4" variant="contained" size="large">PREV</Button>
-				<Button variant="contained" size="large">NEXT</Button>
+			<div className="step-buttons width-full flex">
+				<div style={{marginRight: '20.3%'}}>
+					<Button className="mr-4" variant="contained" size="large" onClick={onPrevHandler}>
+						PREV
+					</Button>
+					<Button variant="contained" size="large" onClick={onNextHandler}>
+						NEXT
+					</Button>
+				</div>
+				<img src={circularIcon} id="circular-icon" alt="circular-icon"/>
 			</div>
 		</div>
 	);
