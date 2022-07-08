@@ -1,9 +1,10 @@
 import React from 'react';
+import MainContainer from '../components/MainContainer';
 
 const MicroTaskQueue = () => {
     return (
         <div>
-            MicroTaskQueue
+             <MainContainer/>
         </div>
     );
 };
