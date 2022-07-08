@@ -17,28 +17,28 @@ import circularIcon from '../circular-icon.png';
 
 import { getPath } from '../utils';
 
-const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, sourceCodeData, viewSteps = [] }) => {
+const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, hideCircularIcon, sourceCodeData, viewSteps = [] }) => {
 	const maxStep = viewSteps.length;
 	const [ step, setStep ] = useState(0);
 
 	const runCircularIconAnime = () => {
-		const circularIconElement = document.getElementById('circular-icon');
-		circularIconElement.classList.add('running');
-		setTimeout(() => {
-			circularIconElement.classList.remove('running');
-		}, 1000);
+		if(!hideCircularIcon) {
+			const circularIconElement = document.getElementById('circular-icon');
+			circularIconElement.classList.add('running');
+			setTimeout(() => {
+				circularIconElement.classList.remove('running');
+			}, 1000);
+		}
 	};
 
 	const onPrevHandler = () => {
 		if (step >= 1) {
-			runCircularIconAnime();
 			setStep(step - 1);
 		}
 	};
 
 	const onNextHandler = () => {
 		if (step + 1 < maxStep) {
-			runCircularIconAnime();
 			setStep(step + 1);
 		}
 	};
@@ -86,7 +86,7 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, sourceC
 						NEXT
 					</Button>
 				</div>
-				<img src={circularIcon} id="circular-icon" alt="circular-icon" />
+				{!hideCircularIcon && <img src={circularIcon} id="circular-icon" alt="circular-icon" />}
 			</div>
 		</div>
 	);
