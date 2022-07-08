@@ -6,7 +6,7 @@ import { callStackViewSteps } from '../data/callStack/callStackViewSteps';
 const CallStack = () => {
 	return (
 		<div>
-			<MainContainer hideWebAPIs hideTaskQueue hideMicrotaskQueue hideCircularIcon sourceCodeData={sourceCodeData} viewSteps={callStackViewSteps}/>
+			<MainContainer hideWebAPIs hideTaskQueue hideMicrotaskQueue hideCircularIcon hideBrowser sourceCodeData={sourceCodeData} viewSteps={callStackViewSteps}/>
 		</div>
 	);
 };

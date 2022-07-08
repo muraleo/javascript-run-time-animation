@@ -18,7 +18,7 @@ import circularIcon from '../circular-icon.png';
 
 import { getPath } from '../utils';
 
-const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, hideCircularIcon, sourceCodeData, viewSteps = [] }) => {
+const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, hideCircularIcon, hideBrowser, sourceCodeData, viewSteps = [] }) => {
 	const maxStep = viewSteps.length;
 	const [ step, setStep ] = useState(0);
 
@@ -60,8 +60,8 @@ const MainContainer = ({ hideWebAPIs, hideTaskQueue, hideMicrotaskQueue, hideCir
 							sourceCodeData={sourceCodeData}
 							sourceCodeSteps={viewSteps[step].sourceCodeSteps}
 						/>
-						<ConsoleSection consoleData={viewSteps[step].consoleSteps} classNames="half-height"/>
-						<BrowserSection />
+						<ConsoleSection consoleData={viewSteps[step].consoleSteps} classNames={`hideBrowser ? "" : "half-height"`}/>
+						{!hideBrowser && <BrowserSection />}
 					</Grid>
 					<Grid item xs={8}>
 						<div className="jre-container">

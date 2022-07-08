@@ -16,7 +16,7 @@ export const callStackViewSteps = [
     },
     {
         sourceCodeSteps: [10, 3, 6],
-        callStackSteps: ['greeting();', 'sayHi();', 'console.log(Hi);'],
+        callStackSteps: ['greeting();', 'sayHi();', 'console.log("Hi");'],
         consoleSteps: ['hello world!']
     },
     {
