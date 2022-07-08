@@ -70,7 +70,7 @@ const MainContainer = ({
             />
             <ConsoleSection
               consoleData={viewSteps[step].consoleSteps}
-              classNames={`hideBrowser ? "" : "half-height"`}
+              classNames={hideBrowser ? "" : "half-height"}
             />
             {!hideBrowser && <BrowserSection />}
           </Grid>
