@@ -7,7 +7,13 @@
 
   button {
     margin: 0 40px;
+    padding: 0;
     width: 300px;
+
+    a {
+      width: 100%;
+      padding: 8px 22px;
+    }
   }
 }
 
@@ -17,10 +23,21 @@ a {
 }
 
 .main-container {
+  color: #3E5060;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: rgb(231, 235, 240);
   padding: 30px;
+  
+  .nav {
+    position: absolute;
+    padding-left: 20px;
+    width: 100vw;
+    background-color: #002984;
+    top: 0;
+    left: 0;
+  }
 
   .box-section {
     border: 1px black solid;
@@ -39,11 +56,11 @@ a {
   }
 
   .call-stack-section {
-    height: 30vh;
+    height: 36vh;
   }
 
   .web-api-section {
-    height: 30vh;
+    height: 36vh;
   }
 
   .task-queue-section {
@@ -51,6 +68,17 @@ a {
   }
   .microtask-queue-section {
     height: 20vh;
+  }
+
+  .step-buttons button{
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .section-header {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    color: #263238;
   }
 }
 
