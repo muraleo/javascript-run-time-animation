@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/javascript-run-time-animation/static/css/main.e45c05e9.css",
-    "main.js": "/javascript-run-time-animation/static/js/main.a8338776.js",
+    "main.css": "/javascript-run-time-animation/static/css/main.29d3bd51.css",
+    "main.js": "/javascript-run-time-animation/static/js/main.a2d4ac99.js",
     "index.html": "/javascript-run-time-animation/index.html",
-    "main.e45c05e9.css.map": "/javascript-run-time-animation/static/css/main.e45c05e9.css.map",
-    "main.a8338776.js.map": "/javascript-run-time-animation/static/js/main.a8338776.js.map"
+    "main.29d3bd51.css.map": "/javascript-run-time-animation/static/css/main.29d3bd51.css.map",
+    "main.a2d4ac99.js.map": "/javascript-run-time-animation/static/js/main.a2d4ac99.js.map"
   },
   "entrypoints": [
-    "static/css/main.e45c05e9.css",
-    "static/js/main.a8338776.js"
+    "static/css/main.29d3bd51.css",
+    "static/js/main.a2d4ac99.js"
   ]
 }
