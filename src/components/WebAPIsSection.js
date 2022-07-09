@@ -9,10 +9,10 @@ const WebAPIsSection = ({webApisData = []}) => {
 
       <div className="section-content-height-full">
         {webApisData.map((data, idx) => {
-          const {content, countDownTime} = data;
+          const {content, countDownTime, highlight} = data;
           return (
             <div key={`web-apis-${idx}`}>
-              <SectionCard content={content} countDownTime={countDownTime}/>
+              <SectionCard content={content} countDownTime={countDownTime} highlight={highlight}/>
             </div>
           );
         })}

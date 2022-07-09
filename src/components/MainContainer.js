@@ -26,6 +26,7 @@ const MainContainer = ({
   hideBrowser,
   sourceCodeData,
   viewSteps = [],
+  onClickHandler
 }) => {
   const maxStep = viewSteps.length;
   const [step, setStep] = useState(0);
@@ -72,7 +73,7 @@ const MainContainer = ({
               consoleData={viewSteps[step].consoleSteps}
               classNames={hideBrowser ? "" : "half-height"}
             />
-            {!hideBrowser && <BrowserSection />}
+            {!hideBrowser && <BrowserSection onClickHandler={onClickHandler}/>}
           </Grid>
           <Grid item xs={8}>
             <div className="jre-container">
