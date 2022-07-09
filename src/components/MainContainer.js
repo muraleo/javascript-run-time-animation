@@ -100,7 +100,7 @@ const MainContainer = ({
           </Grid>
         </Grid>
       </Box>
-      <div className="step-buttons width-full flex">
+      <div className="step-buttons width-full flex justify-between">
         <div style={{ marginRight: "20.3%" }}>
           <Button
             className="mr-4"
@@ -113,6 +113,10 @@ const MainContainer = ({
           <Button variant="contained" size="large" onClick={onNextHandler}>
             NEXT
           </Button>
+        </div>
+        <div className="mt-2">
+          Inspired by <a className="text-orange-500" target="_blank" href="http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D">Loupe </a> 
+          and <a className="text-orange-500" target="_blank" href="https://www.jsv9000.app/?code=ZnVuY3Rpb24gYSgpe30KCnNldFRpbWVvdXQoZnVuY3Rpb24gYigpIHt9LCAwKTsKClByb21pc2UucmVzb2x2ZSgpLnRoZW4oZnVuY3Rpb24gYygpIHt9KTsKCmEoKTs%3D">jsv9000</a>.
         </div>
       </div>
     </div>
