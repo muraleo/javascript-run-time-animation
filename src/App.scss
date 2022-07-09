@@ -103,6 +103,9 @@ a {
 
   .section-card {
     margin-top: 5px;
+    &.highlight {
+      background-color: #f97316;
+    }
     & > div {
       padding: 10px;
       white-space: pre;
