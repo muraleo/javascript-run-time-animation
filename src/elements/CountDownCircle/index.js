@@ -4,14 +4,11 @@ import "./style.scss";
 const CountDownCircle = ({ countDownTime }) => {
   const countDownCircleRef = useRef();
 
-  console.log(countDownTime);
-
   useEffect(() => {
     let countdown = countDownTime;
     const countDownInterval = setInterval(countDownCallBack, 1000);
 
     function countDownCallBack() {
-      console.log(countdown);
       if (countdown - 1 < 0) {
         clearInterval(countDownInterval);
         return;

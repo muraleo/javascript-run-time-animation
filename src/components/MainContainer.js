@@ -94,7 +94,7 @@ const MainContainer = ({
                 {!hideTaskQueue && <TaskQueueSection taskQueueData={viewSteps[step].taskQueueSteps}/>}
               </Grid>
               <Grid item xs={12}>
-                {!hideMicrotaskQueue && <MicrotaskQueueSection />}
+                {!hideMicrotaskQueue && <MicrotaskQueueSection microtaskQueueData={viewSteps[step].microtaskQueueSteps}/>}
               </Grid>
             </div>
           </Grid>

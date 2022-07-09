@@ -4,7 +4,6 @@ import SourceCodeRow from "../elements/SourceCodeRow";
 
 const SourceCodeSection = ({ sourceCodeData = "", sourceCodeSteps = [] }) => {
   const sourceCodeStrings = sourceCodeData.split("\n");
-  console.log(sourceCodeStrings);
 
   return (
     <div className="box-section source-code-section">
