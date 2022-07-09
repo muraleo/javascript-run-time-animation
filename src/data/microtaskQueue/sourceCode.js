@@ -1,7 +1,13 @@
-export const sourceCodeData = `function a(){}
+export const sourceCodeData = `function a(){
+    console.log('a')
+}
 
-setTimeout(function b() {}, 0);
+setTimeout(function b() {
+    console.log('b')
+}, 0);
 
-Promise.resolve().then(function c() {});
+Promise.resolve().then(function c() {
+    console.log('c')
+});
 
 a();`;
