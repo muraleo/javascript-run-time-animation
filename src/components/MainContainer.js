@@ -26,7 +26,8 @@ const MainContainer = ({
   hideBrowser,
   sourceCodeData,
   viewSteps = [],
-  onClickHandler
+  onClickHandler,
+  taskQueueHeader
 }) => {
   const maxStep = viewSteps.length;
   const [step, setStep] = useState(0);
@@ -91,7 +92,7 @@ const MainContainer = ({
                 />
               )}
               <Grid item xs={12}>
-                {!hideTaskQueue && <TaskQueueSection taskQueueData={viewSteps[step].taskQueueSteps}/>}
+                {!hideTaskQueue && <TaskQueueSection taskQueueData={viewSteps[step].taskQueueSteps} taskQueueHeader={taskQueueHeader}/>}
               </Grid>
               <Grid item xs={12}>
                 {!hideMicrotaskQueue && <MicrotaskQueueSection microtaskQueueData={viewSteps[step].microtaskQueueSteps}/>}

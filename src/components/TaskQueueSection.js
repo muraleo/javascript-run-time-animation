@@ -2,10 +2,10 @@ import React from "react";
 import SectionHeader from "../elements/SectionHeader";
 import SectionCard from "../elements/SectionCard";
 
-const TaskQueueSection = ({taskQueueData = []}) => {
+const TaskQueueSection = ({taskQueueData = [], taskQueueHeader = "Task Queue"}) => {
   return (
     <div className="box-section task-queue-section">
-      <SectionHeader header="Task Queue" />
+      <SectionHeader header={taskQueueHeader} />
       
       <div className="section-content-height-full">
         {taskQueueData.map((data, idx) => {

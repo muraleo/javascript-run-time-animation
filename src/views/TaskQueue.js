@@ -16,6 +16,7 @@ const TaskQueue = () => {
         sourceCodeData={sourceCodeData}
         viewSteps={viewSteps}
         onClickHandler={onClickHandler}
+        taskQueueHeader="Callback Queue"
       />
     </div>
   );
