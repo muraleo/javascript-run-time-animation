@@ -56,7 +56,7 @@ const MainContainer = ({
   return (
     <div className="main-container">
       <div className="nav flex justify-between">
-        <Link to={getPath()}>HOME</Link>
+        <Link to="/">HOME</Link>
         <div className="mr-16 text-white">
           Step: <span>{step + 1}</span>
           <span>{step === maxStep - 1 ? " (Finished!)" : ""}</span>

@@ -12,12 +12,12 @@ import { getPath } from "./utils";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/javascript-run-time-animation'>
       <Routes>
-        <Route path={getPath("")} element={<App />} />
-        <Route path={getPath("callstack")} element={<CallStack />} />
-        <Route path={getPath("microtaskqueue")} element={<MicroTaskQueue />} />
-        <Route path={getPath("taskqueue")} element={<TaskQueue />} />
+        <Route path='' element={<App />} />
+        <Route path="/callstack" element={<CallStack />} />
+        <Route path="/microtaskqueue" element={<MicroTaskQueue />} />
+        <Route path="/taskqueue" element={<TaskQueue />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
